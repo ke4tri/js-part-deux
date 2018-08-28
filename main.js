@@ -54,3 +54,4 @@ console.log('indexof pea', pie.indexOf('pea'));
 const quote = 'winter is coming';
 const newQuote = quote.replace(/is/g , "ain't" ); //have to capture the new quote newQuote /g is globally 
 console.log('newQuote', newQuote);
+//rubular.com is a way for you to map characters. shortens code?
