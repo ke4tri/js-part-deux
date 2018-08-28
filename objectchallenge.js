@@ -1,6 +1,6 @@
 let elizabethSanger = {
     congressionalDistrict: 5,
-    platformStatment: [
+    statments: [
         {statement: "pie good", category: "Jobs"},
         {statement: "Taxes good", category: "Taxes"},
         {statement: "Roads good", category: "Infrastructure"}
@@ -46,4 +46,14 @@ let elizabethSanger = {
     ],
     missionStatement: "Do good",
     voterRegistrationUrl: 'www.blah.com'
+}
+
+const printToDom = (stringToPrint, divId) => {
+    const selectedDiv = document.getElementById(divId);
+    selectedDiv.innerHTML += stringToPrint;
+};
+
+const printToDom2 = (stringToPrint, divClass) => {
+    const selectedDiv = document.getElementsByClassName(divClass);
+    selectedDiv.innerHTML += stringToPrint;
 }
