@@ -55,3 +55,17 @@ const quote = 'winter is coming';
 const newQuote = quote.replace(/is/g , "ain't" ); //have to capture the new quote newQuote /g is globally 
 console.log('newQuote', newQuote);
 //rubular.com is a way for you to map characters. shortens code?
+
+//object
+const fancyObject = {};
+
+fancyObject.color = 'red';
+fancyObject['number'] = 10; //creates a number key
+
+console.log("fanceyObject", fancyObject);
+
+// const fancyObject = {
+//     color: red, 
+//     number: 10
+// }
+
