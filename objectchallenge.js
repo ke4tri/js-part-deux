@@ -1,9 +1,9 @@
 let elizabethSanger = {
     district: 5,
     statements: [
-        {statement: "We will have better jobs in the United States in my term. ", category: "Jobs: "},
-        {statement: "Taxes will go down where they need to go down.", category: "Taxes: "},
-        {statement: "Roads will tumble in the wake of the new roads we will create. ", category: "Infrastructure:"}
+        {statement: "We will have better jobs in the United States in my term. ", category: "Jobs : "},
+        {statement: "Taxes will go down where they need to go down.", category: "Taxes : "},
+        {statement: "Roads will tumble in the wake of the new roads we will create. ", category: "Infrastructure :"}
     ], 
     donationFormUrl: 'www.donate.com' ,
     events: [
@@ -58,6 +58,12 @@ const printToDom2 = (stringToPrint, divClass) => {
     selectedDiv.innerHTML += stringToPrint;
 }
 
+const printToDom3 = (stringToPrint, aTag) => {
+    const selectedDiv = document.getElementsByTagName(aTag);
+    selectedDiv.innerHTML += stringToPrint;
+}
+
+
 //turn into arrow functions
 
 let district_func =()  => {
@@ -70,33 +76,36 @@ let district_func =()  => {
 let statements_func = () => {
     let eliz_stat = elizabethSanger.statements.length ;
     for (i=0;i<eliz_stat;i++) {
-        printToDom(elizabethSanger.statements[i].category, 'statement');
-        printToDom(elizabethSanger.statements[i].statement, 'statement');
+        
+        let one = elizabethSanger.statements[i].category;
+        let three = elizabethSanger.statements[i].statement;
+        // printToDom(elizabethSanger.statements[i].category, 'statement');
+        // printToDom(elizabethSanger.statements[i].statement, 'statement');
+        printToDom(one + three + '<br>', 'statement');
     }
 }
 let donationForm_func = () => {
     dis = elizabethSanger.donationFormUrl;
     dis2 = 'Donation Form : ';
-    printToDom(dis2 + dis,'donationForm');
-    
+    printToDom(dis2 + '<a href="www.vote.org">' + dis + '</a>','donationForm');
 }
 let calendarEvents_func = () => {
     let eliz_stat = elizabethSanger.events.length ;
     for (i=0;i<eliz_stat;i++) {
-        printToDom(elizabethSanger["events"][i].date, 'calEvents');
-        printToDom(elizabethSanger["events"][i].title, 'calEvents')
-        printToDom(elizabethSanger["events"][i].description, 'calEvents');
+        printToDom(elizabethSanger["events"][i].date + ' : ', 'calEvents');
+        printToDom(elizabethSanger["events"][i].title + ' - ', 'calEvents')
+        printToDom(elizabethSanger["events"][i].description + '<br>', 'calEvents');
 }
 }
 let volunteer_func = () => {
     let eliz_stat = elizabethSanger.volunteers.length ;
     for (i=0;i<eliz_stat;i++) {
-        printToDom(elizabethSanger.volunteers[i].name, 'volunteer');
-        printToDom(elizabethSanger.volunteers[i].Address, 'volunteer');
-        printToDom(elizabethSanger.volunteers[i].email, 'volunteer');
-        printToDom(elizabethSanger.volunteers[i].phone, 'volunteer');
-        printToDom(elizabethSanger.volunteers[i].availablity, 'volunteer');
-        printToDom(elizabethSanger.volunteers[i].activities, 'volunteer');
+        printToDom('Name : ' + elizabethSanger.volunteers[i].name + '<br>', 'volunteer');
+        printToDom('Address : ' + elizabethSanger.volunteers[i].Address + '<br>', 'volunteer');
+        printToDom('Email :' + elizabethSanger.volunteers[i].email + '<br>', 'volunteer');
+        printToDom('Phone : ' + elizabethSanger.volunteers[i].phone + '<br>', 'volunteer');
+        printToDom('Availablity : ' + elizabethSanger.volunteers[i].availablity + '<br>', 'volunteer');
+        printToDom('Activities : '+ elizabethSanger.volunteers[i].activities + '<br>' + '<br>', 'volunteer');
     }
 }
 let biography_func = () => {
@@ -120,7 +129,12 @@ let missionStatment_func = () => {
 let registerVote_Url = () => {
     dis = elizabethSanger.voterRegistrationUrl;
     dis2 = 'Voter Registration : ';
-    printToDom(dis2 + dis,'registerVote');
+    printToDom(dis2 + '<a href="www.vote.org">' + dis + '</a>','registerVote');
+}
+
+let registerToVoteString = () => { 
+    lin = '<a herf="www.vote.gov"></a>' ;
+    printToDom(lin,"registerVote");
 }
 
 district_func();
@@ -132,6 +146,9 @@ biography_func();
 image_func();
 missionStatment_func();
 registerVote_Url();
+// registerToVoteString()
+printToDom3(registerToVoteString,'a');
+
 
 
 // how to select array elements inside the object elizabethSanger.volunteers[0].name 
