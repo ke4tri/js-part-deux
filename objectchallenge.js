@@ -1,51 +1,51 @@
 let elizabethSanger = {
     congressionalDistrict: 5,
     statments: [
-        {statement: "pie good", category: "Jobs"},
-        {statement: "Taxes good", category: "Taxes"},
-        {statement: "Roads good", category: "Infrastructure"}
+        {statement: "We will have gooder jobes in the United States in my term.", category: "Jobs"},
+        {statement: "Taxes will go down where they need to go down.", category: "Taxes"},
+        {statement: "Roads will tumble in the wake of the new roads we will create", category: "Infrastructure"}
     ], 
     donationFormUrl: 'www.okyou .com' ,
     events: [
-        {date: '08/27/2018', title:"Waynes bday", description:"eat it all"},
-        {date: '08/09/2018', title:"Job day", description:"Party Really"},
+        {date: '08/27/2018', title:"March on Virginia", description:"Show them what a Republican is!"},
+        {date: '08/09/2018', title:"Make the Moment", description:"Take the hill!"},
     ],
     volunteers: [
         {
-            name: "Cow boy",
+            name: "John Doe",
             Address: '1 main street',
             email: 'kbgood@gmail.com',
-            phone: '1234211111',
-            availablity: 'all the time',
-            activities: 'soccer',
+            phone: '449-876-6676',
+            availablity: 'Monday-Friday',
+            activities: 'Fishing',
         },
         {
-            name: "Johnny Time",
+            name: "Jane Doe",
             Address: '6 main street',
             email: 'sdfood@gmail.com',
-            phone: '12342345111',
-            availablity: 'never',
-            activities: 'j-Twon',
+            phone: 783-222-8374,
+            availablity: 'Monday-Friday',
+            activities: 'Hockey',
 
         }
         
     ],
-    biography: "This is just going to be some text I am goin to write",
+    biography: "This is who I am. I am from the great state of Texas and I want to call TN my home. I know this may never happent but this is just something we are going to do and we are going to take it to the hill. I love cats and the way the sun sets every evnening for some reason. ",
     images: [
         {
-            imageUrl: "www.jpg",
-            description: "best constitutne",
-            type: "constitution"
+            imageUrl: "https://placeimg.com/640/480/people",
+            description: "My early days",
+            type: "political"
         },
         {
-            imageUrl: "time_time.jpg",
-            description: "When its time to leave",
-            type: "kat kat"
+            imageUrl: "https://placeimg.com/640/480/people",
+            description: "The day i won Texas",
+            type: "political"
         },
       
     ],
-    missionStatement: "Do good",
-    voterRegistrationUrl: 'www.blah.com'
+    missionStatement: "Do good and love the snow when it comes",
+    voterRegistrationUrl: 'https://vote.gov/'
 }
 
 const printToDom = (stringToPrint, divId) => {
@@ -57,3 +57,4 @@ const printToDom2 = (stringToPrint, divClass) => {
     const selectedDiv = document.getElementsByClassName(divClass);
     selectedDiv.innerHTML += stringToPrint;
 }
+
